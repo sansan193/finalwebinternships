@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../cssall/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../cssall/intsh.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="row ">
+            <div class="info-card p-4 col-12 col-lg-10">
+                <div class="btn-back">
+                    <a href="stdnt.php" class="btn-top-back">ย้อนกลับ</a>
+                </div>
+                <div class="text-detl mt-5">
+                    <h1 class="head-r ">กรอกข้อมูลรายละเอียดการฝึกงาน</h1>
+                    <hr class="red-line ">
+                </div>
+
+                <form action="confirm.php" method="POST">
+                    <div class="form-box">
+                        <div class="row justify-content-center">
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <div class="text-left">
+                                        <span>วันที่เริ่ม-วันที่สิ้นสุด</span>
+                                        <span> องค์กร/บริษัท</span>
+                                        <span>ที่อยู่</span>
+                                        <span>จังหวัด</span>
+                                        <span>อำเภอ/เขต</span>
+                                        <span>ตำบล/แขวง</span>
+                                        <span>ติดต่อ</span>
+                                        <span>รายละเอียดงาน</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-right">
+                                        <div class="date-group">
+                                            <input type="date" name="request_Date_Start" required>
+                                            <input type="date" name="request_Date_End" required>
+                                        </div>
+                                        <input type="text" name="company_Name" required>
+                                        <input type="text" name="company_Address" required>
+                                        <input type="text" name="province" required>
+                                        <input type="text" name="district" required>
+                                        <input type="text" name="sub_District" required>
+                                        <input type="text" name="company_Contact" required>
+                                        <textarea name="internship_Detail" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="btn-back-box">
+                            <button type="submit" class="btn-custom">ตรวจสอบข้อมูล</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+/* การตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #252525;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sarabun', sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Card หลัก */
+.info-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #848484;
+    border-radius: 40px;
+    width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* หัวข้อ */
+.text-detl h1 {
+    font-weight: 900;
+    font-size: 32px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.red-line {
+    border: 2px solid #920000; /* เส้นสีแดงเข้ม */
+    opacity: 1;
+    width: 100%;
+    margin: 10px 0 30px 0;
+    margin-top: 20px;
+}
+
+/* ส่วนแสดงข้อมูล (หน้า 1) */
+.detl-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.info-left {
+    text-align: right;
+    font-weight: 900;
+    color: #333;
+    border-right: 2px solid #eee;
+    padding-right: 10px;
+}
+
+.info-right {
+    background: #4d3737;
+    text-align: left;
+    color: #670808;
+}
+
+.detl-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* ส่วนฟอร์ม (หน้า 2) */
+.form-box {
+    height: 100%s;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    white-space: nowrap;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.text-left {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #333;
+    height: 400px;
+    padding: 0 0;
+    gap: 7px;
+    padding-right: 10px;
+
+}
+
+.input-right {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 60%;
+    gap: 5px;
+    padding-left: 10px;
+
+}
+.input-right input {
+    background: #d7d7d7;
+    padding: 8px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+    
+.input-right textarea{
+    background: #d7d7d7;
+    padding: 7px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.date-group {
+    display: flex;
+    gap: 10px;
+}
+
+.date-group input {
+    width: calc(50% - 5px);
+}
+
+/* ปุ่มต่างๆ */
+.btn-nav-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.btn-custom {
+    color: white;
+    background-color: rgb(50, 50, 56);
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-custom:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-top-back {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    background: #999;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* ปุ่มต่อไปด้านล่าง */
+.btn-submit-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-next {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px 60px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-next:hover {
+    background: #000;
+}

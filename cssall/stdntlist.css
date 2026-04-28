@@ -1,0 +1,75 @@
+/* พื้นหลังสีเทาอ่อน */
+body {
+    background-color: #e0e0e0;
+    font-family: 'Sarabun', sans-serif;
+
+}
+
+/* การ์ดสีขาวขอบมน */
+.info-card {
+    background-color: #ffffff;
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 600px;
+}
+
+/* หัวข้อสีเทาเข้มแบบในภาพ */
+.head-title {
+    background-color: #7a7a7a;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+}
+
+/* เส้นใต้หัวข้อ */
+.gray-line {
+    border-top: 5px solid #7a7a7a;
+    opacity: 1;
+    margin-top: 0;
+}
+
+/* จัดหน้าตาตาราง */
+.custom-table {
+    margin-top: 20px;
+}
+
+.custom-table thead th {
+    border-top: none;
+    border-bottom: 2px solid #ddd;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.custom-table tbody td {
+    padding: 15px 10px;
+    vertical-align: middle;
+    color: #444;
+}
+
+/* ชื่อนิสิต */
+.name-col {
+    font-weight: 500;
+}
+
+/* ปุ่มรายละเอียดแบบตัวหนังสือขีดเส้นใต้ */
+.btn-detail {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.btn-detail:hover {
+    color: #b32d2d; /* เปลี่ยนสีเมื่อเอาเมาส์วาง */
+}
+
+/* ปรับแต่งแถวเมื่อเมาส์ชี้ */
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}

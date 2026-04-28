@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ - สาขาสารสนเทศศึกษา</title>
+    <link rel="stylesheet" href="cssall/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cssall/stylelogin.css"> 
+</head>
+<body class="bg-light d-flex align-items-center vh-100">
+    <div class="container mx-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="login-card p-5 shadow position-relative">
+                    
+                    <div class="boxx mt-5">
+                        <h1 class="text-center fw-bold main-title">ลงชื่อเข้าสู่ระบบ</h1>
+                        <p class="text-center sub-title mb-4">นิสิต อาจารย์ และบุคลากร<br>สาขาสารสนเทศศึกษา</p>
+                        <hr class="red-line mb-5">
+                    </div>
+
+                    <!-- ส่วนแสดง Error เมื่อรหัสผิด -->
+                    <?php if(isset($_GET['error'])): ?>
+                        <div class="alert alert-danger text-center p-2 mb-4" style="border-radius: 15px; font-size: 0.9rem;">
+                            ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง!
+                        </div>
+                    <?php endif; ?>
+
+                    <form action="check_login.php" method="POST">
+                        <div class="login-box mb-1">
+                            <div class="login-n">
+                               <div class="user-box mb-4 d-flex align-items-center">
+                                    <label class="me-3 label-text">User :</label>
+                                    <input type="text" name="username" class="form-control custom-input" required>
+                                </div>
+                                <div class="password-box mb-4 d-flex align-items-center">
+                                    <label class="me-3 label-text">Password :</label>
+                                    <input type="password" name="password" class="form-control custom-input" required>
+                                </div>
+                            </div>
+                            <div class="btn-n">  
+                                <button type="submit" class="btn-confirm px-5 py-2">ยืนยัน</button>
+                                <a href="index.php" class="back-btn text-decoration-none text-secondary">ย้อนกลับ</a> 
+                            </div>
+                         </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    background-color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-title {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.red-line-top {
+    border-top: 5px solid #b32d2d;
+    opacity: 1;
+    width: 60%;
+    margin: 0 auto 30px;
+}
+
+.deail-card {
+    background-color: rgb(60, 60, 60);
+    justify-content: center;
+    
+    height: 100%
+}
+/* การ์ดข้อมูลสีขาวขอบมน */
+.detail-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* จัดแนวหัวข้อข้อมูลให้ตรงกัน */
+.info-content {
+    display: flex;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+}
+
+.new-request{
+    padding: 20px;
+    text-align: center;
+}
+
+.info-row {
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 180px;
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.value {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+    font-weight: 500;
+    color: #820000;
+    padding-left: 10px;
+    white-space: nowrap;
+    
+}
+
+/* ปุ่มย้อนกลับทรงแคปซูล */
+.btn-back {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.red-line {
+    border: 2px solid #8e8e8e;
+    opacity: 1;
+    width: 100%;
+}
+
+.btn-back:hover {
+    background-color: #333;
+}
+
+.download-box{
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    color: rgb(34, 76, 43);
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.btn-download-pdf{
+    background-color: #004b1e;
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 600px){
+    .stdnt-box {
+        padding: 2rem;
+    }
+    .label{
+        font-size: 15px;
+    }
+    .value{
+        font-size: 15px;
+    }
+}

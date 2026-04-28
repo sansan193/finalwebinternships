@@ -1,0 +1,1084 @@
+* {
+    font-family: 'Kanit', sans-serif !important;
+}
+
+/* 1. ล้างค่าเริ่มต้นและตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050505; /* พื้นหลังดำสนิทตามรูป */
+    color: white;
+    font-family: 'Kanit', sans-serif !important;    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* จัดให้ Nav อยู่บน Header */
+}
+
+.navbar {
+    background-color: #130606;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* เปลี่ยนเป็น center เพื่อให้ทุกอย่างอยู่กึ่งกลางบรรทัด */
+    padding: 0; /* เอา padding ออกเพื่อให้ชิดขอบจอจริงๆ */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: nowrap;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    height: 80px; /* ให้พื้นหลังสีเขียว/เทาสูงเต็มแถบ navbar */
+
+}
+
+.nav-left {
+    /* ไม่ต้องใช้ margin-right: auto เพราะมี space-between แล้ว */
+    padding-left: 0;
+    padding: 2px;
+    margin: 2px;
+    gap: 6px;
+    width: fit-content;
+
+
+}
+
+.nav-right {
+    /* แยกบรรทัดออกมาให้ชัดเจน */
+    flex-shrink: 1; /* ยอมให้หดตัวได้เมื่อจอเล็ก */
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0 1px;
+}
+
+
+.nav-left :hover{
+    background-color: #4a000075;
+    transform: scale(1.1); 
+}
+
+.nav-right a:hover{
+    background-color: #84000075;
+    color: #ffb700;
+    transform: scale(1.1); 
+}
+
+.nav-logo {
+    height: 60px; /* ปรับความสูงตามต้องการ */
+    width: auto;  /* ให้ความกว้างปรับตามสัดส่วนรูป */
+    display: block;
+    padding: 0 ;
+    transition: all 0.3s ease;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.box-login-top{
+    justify-content: center;
+    margin-right: 20px;
+    padding: 20px 8px;
+}
+
+.login-top{
+    background-color: #b80000;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 20px 20px;
+    border-radius: 30px;
+    height: 8px;
+    transition: 0.3s;
+}
+
+/* 3. คอนเทนเนอร์หลัก (ส่วนเนื้อหา Header) */
+/* 3. คอนเทนเนอร์หลัก (ส่วนเนื้อหา Header) */
+/* 3. คอนเทนเนอร์หลัก (ส่วนเนื้อหา Header) */
+/* 3. คอนเทนเนอร์หลัก (ส่วนเนื้อหา Header) */
+
+
+.header-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px 20px 20px; /* เพิ่ม padding บนให้มากขึ้นกัน Nav ทับ */
+    width: 100%;
+    height: 200px;
+    min-height: 100vh;
+    margin-top: 50px;
+    
+    /* เพิ่มส่วนนี้: เพื่อไม่ให้รูปที่ขยายล้นออกไปบังส่วนอื่นของหน้าเว็บ */
+    overflow: hidden; 
+    position: relative;
+    min-height: 80vh; /* กำหนดความสูงขั้นต่ำเพื่อให้เห็นรูปชัดๆ */
+    overflow: hidden; /* สำคัญ: กันไม่ให้รูปที่ขยายล้นออกไปทับส่วนอื่น */
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../pic/huswu.jpg') ;    
+    /* ตั้งค่าให้รูปเต็มพื้นที่และอยู่กึ่งกลาง */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 4. พื้นที่สำหรับใส่รูปตัวอักษร (เว้นไว้) */
+.logo-area {
+    width: 100%;
+    max-width: 500px;
+    min-height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-area img {
+    max-width: 100%;
+    height: auto;
+}
+/* เลือกที่ตัวรูปภาพโดยตรง */
+.object img {
+    /* บีบรูป 6K ของคุณให้เหลือขนาดที่พอดีกับหน้าจอตอนเริ่มต้น */
+    width: 700px;       /* ให้กว้างเต็ม container */
+    max-width: 700px;  /* แต่ห้ามกว้างเกิน 500px (ปรับเลขนี้ตามใจชอบ) */
+    height: auto;      /* รักษาอัตราส่วนรูป */
+    margin: 0;
+    
+    display: block;
+    transition: transform 0.1s ease-out; /* ช่วยให้การขยายดูนุ่มนวล */
+    will-change: transform; /* ช่วยให้ Browser ประมวลผลได้ลื่นขึ้น */
+}
+
+.text-content {
+    /* ทำให้พื้นหลังที่เป็น Gradient ทะลุมาที่ตัวอักษร */
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* ทำให้การเปลี่ยนสีดูนุ่มนวลขึ้น */
+    transition: background-image 0.2s ease;
+}
+
+/* 5. ส่วนข้อความตัวอักษร */
+.sub-title {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif; /* อย่าลืม Link Font ที่ HTML */
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+.main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 1000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+/* 6. ปุ่ม Log in และ Note ด้านล่าง */
+.login-btn {
+    display: inline-block;
+    background-color: #B20000;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+.login-btn:hover {
+    background-color: #FF0000;
+    transform: scale(1.05);
+}
+
+.login-section p {
+    color: #ff5858;
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+/* 7. Responsive สำหรับมือถือ */
+@media (max-width: 600px) {
+    .nav-left a, .nav-right a {
+        padding: 0 10px;   /* ลดช่องว่างให้แคบลง */
+        font-size: 15px;  /* ลดขนาดตัวอักษร */
+    }
+    .divider { display: none; }
+    .nav-left, .nav-right { flex-wrap: wrap; justify-content: center; }
+    .main-title { font-size: 2.5rem; }
+    .sub-title { font-size: 1.5rem; }
+}
+
+
+/* ไฮไลท์ */
+/* ไฮไลท์ */
+/* ไฮไลท์ */
+/* ไฮไลท์ */
+/* ไฮไลท์ */
+/* ไฮไลท์ */
+/* ไฮไลท์ */
+/* ไฮไลท์ */
+/* ไฮไลท์ */
+/* ไฮไลท์ */
+
+
+
+.highlight-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-weight: 600;
+    justify-content: center;
+}
+
+/* Container หลักสำหรับแอนิเมชัน */
+.highlight-section {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.highlight-container {
+    background-image: linear-gradient(to bottom, #000000, #00000000);
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.highlight-content {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative; /* สำคัญ: เพื่อให้ตัวลูกเทียบตำแหน่งได้ */
+    display: inline-block; 
+    position: relative;
+
+}
+
+.image-area {
+    display: flex;
+    justify-content: center;
+
+}
+.image-area img {
+    width: 60%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.text-area {
+    background-color: rgb(255, 0, 0);
+    flex: 1;
+    min-width: 300px;
+}
+
+.highlight-title {
+    position: absolute;
+    font-size: 100px; /* ปรับขนาดตามหน้าจอ */
+    font-weight: bold;
+    padding: 450px 450px;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    white-space: nowrap;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* ตั้งค่าเริ่มต้นตอนยังไม่เลื่อน (เหลือง-ขาว) */
+}
+@media (max-width: 800px) {
+    .highlight-section {
+        background-color: #000000;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    .highlight-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .image-area {
+        display: flex;
+        justify-content: center;
+    }
+    .highlight-title {
+        font-size: 60px;
+        padding: 400px 70px;
+    }
+    .image-area img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+}
+}
+
+
+
+/* พื้นที่สำหรับใส่รูป */
+.image-box {
+    width: 100%;
+    height: 250px;
+    background-color: #222;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    overflow: hidden;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* คีย์เฟรมสำหรับการเลื่อน */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 2)); /* เลื่อนไปครึ่งหนึ่งของความกว้างทั้งหมด */
+    }
+}
+
+
+
+
+
+/* Hero Section Styling */
+/* หลักสูตร */
+/* หลักสูตร */
+/* หลักสูตร */
+/* หลักสูตร */
+/* หลักสูตร */
+/* หลักสูตร */
+/* หลักสูตร */
+/* หลักสูตร */
+/* หลักสูตร */
+/* หลักสูตร */
+/* หลักสูตร */
+/* หลักสูตร */
+
+
+
+.hero-section {
+    height: 80vh; /* ความสูงเกือบเต็มหน้าจอ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.286)),url('../pic/swukd.jpeg') ;    
+    /* ตั้งค่าให้รูปเต็มพื้นที่และอยู่กึ่งกลาง */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+
+.main-title2 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 10px 0;
+    /* ไล่สีตัวอักษร แดง-ชมพู */
+    background: linear-gradient(to right, #ff0000, #fff3f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.degree-info {
+    font-size: 1.1rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+
+
+
+/* ไฮไลท์บรรณารักษ์ */
+/* ไฮไลท์บรรณารักษ์ */
+/* ไฮไลท์บรรณารักษ์ */
+/* ไฮไลท์บรรณารักษ์ */
+/* ไฮไลท์บรรณารักษ์ */
+/* ไฮไลท์บรรณารักษ์ */
+/* ไฮไลท์บรรณารักษ์ */
+.lib-section {
+    height: 80vh; /* ความสูงเกือบเต็มหน้าจอ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../pic/lib1.JPG') ;    
+    /* ตั้งค่าให้รูปเต็มพื้นที่และอยู่กึ่งกลาง */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.lib-content {
+    max-width: 800px;
+}
+
+.lib-title {
+    font-size: 100px;
+    font-weight: 600;
+    margin-bottom: 0;
+    background: linear-gradient(to right, #ff7e3d, #00bdde);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+
+
+.lib2-section {
+    height: 80vh; /* ความสูงเกือบเต็มหน้าจอ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:linear-gradient(to left,rgb(0, 0, 0), rgba(0, 0, 0, 0.4)),url('../pic/lib3.JPG') ;    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.lib-content {
+    max-width: 800px;
+}
+
+.lib2-title {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #ff2626;
+}
+.lib2-info {
+    font-size: 30px;
+    font-weight: 400;    
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.lib2-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.lib2-info-container {
+    margin-top: 30px;
+    border-radius: 20px;
+    padding-top: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;}   
+    
+    
+
+/* ไฮไลท์เทคโนโลยี */
+/* ไฮไลท์เทคโนโลยี */
+/* ไฮไลท์เทคโนโลยี */
+/* ไฮไลท์เทคโนโลยี */
+/* ไฮไลท์เทคโนโลยี */
+/* ไฮไลท์เทคโนโลยี */
+/* ไฮไลท์เทคโนโลยี */
+.tec-section {
+    height: 80vh; /* ความสูงเกือบเต็มหน้าจอ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../pic/tec3.JPG') ;    
+    /* ตั้งค่าให้รูปเต็มพื้นที่และอยู่กึ่งกลาง */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.tec-content {
+    max-width: 800px;
+}
+
+.tec-title {
+    font-size: 100px;
+    font-weight: 600;
+    margin-bottom: 0;
+    background: linear-gradient(to right, #288cff, #ff0ebf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    
+}
+
+
+
+.tec2-section {
+    height: 80vh; /* ความสูงเกือบเต็มหน้าจอ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:linear-gradient(to bottom,rgba(92, 0, 0, 0.637), rgb(0, 0, 0)),url('../pic/tec1.JPG') ;    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.tec2-title {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+.tec2-info {
+    font-size: 30px;
+    font-weight: 400;    
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.tec2-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.tec2-info-container {
+    margin-top: 30px;
+    border-radius: 20px;
+    padding-top: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;}  
+
+
+
+
+
+
+
+.tecdb-section {
+    height: 80vh; /* ความสูงเกือบเต็มหน้าจอ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:linear-gradient(to left,rgb(0, 0, 0), rgba(0, 0, 0, 0.4)),url('../pic/tecdb.png') ;    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.tecdb-title {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #4a53ff;
+}
+.tecdb-info {
+    font-size: 50px;
+    font-weight: 800;    
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.tecdb-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.tecdb-info-container {
+    margin-top: 30px;
+    border-radius: 80px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-inline: 100px;
+    
+    background-image: linear-gradient(to bottom, #004781, #00000000);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} 
+
+
+
+
+
+.tecphp-section {
+    height: 80vh; /* ความสูงเกือบเต็มหน้าจอ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:linear-gradient(to left,rgb(0, 0, 0), rgba(0, 0, 0, 0.4)),url('../pic/tecphp.png') ;    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+}
+
+.tecphp-title {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #4a53ff;
+}
+.tecphp-info {
+    font-size: 50px;
+    font-weight: 800;    
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.tecphp-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.tecphp-info-container {
+    margin-top: 30px;
+    border-radius: 80px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-inline: 100px;
+    
+    background-image: linear-gradient(to bottom, #004b42a5, #00000000);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} 
+
+/* ปุ่มรายละเอียด */
+.btn-detail {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #a31d1d; /* สีแดงเข้มตามภาพ */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.btn-detail:hover {
+    transform: translateY(-3px);
+    background-color: #c42424;
+    box-shadow: 0 15px 25px rgba(196, 36, 36, 0.3);
+}
+
+/* ปรับปรุงฟอนต์ให้อ่านง่ายขึ้น */
+@import url('https://googleapis.com');
+body {
+    font-family: 'Prompt', sans-serif;
+}
+
+
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+/* Activity Section Styling */
+
+
+.activity-section {
+    background-color: #000;
+    padding: 80px 0;
+    overflow: hidden;
+    font-family: 'Prompt', sans-serif;
+}
+
+.activity-title {
+    color: #ff6b6b;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-left: 5%;
+    margin-bottom: 40px;
+}
+
+.activity-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 5%;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.activity-content {
+    display: flex;
+    gap: 40px;
+    width: max-content; 
+    animation: scrollAuto 30s linear infinite;
+}
+
+/* แก้ไขเป็นบล็อกลิงก์ที่กดได้ทั้งกล่อง */
+.activity-card {
+    min-width: 450px;
+    flex-shrink: 0;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* ตั้งค่าให้รูปเป็นฐานสำหรับข้อความ */
+.activity-img {
+    width: 500px;
+    min-width: 300px;
+    height: 350px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #333;
+    position: relative; /* สำคัญสำหรับการทำ Overlay */
+}
+
+.activity-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* ส่วนข้อความที่ลอยบนภาพ */
+.activity-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85)); /* ทำให้อ่านง่ายขึ้น */
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+.activity-info h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 0 5px 0;
+    font-weight: 500;
+}
+
+.btn-visit {
+    color: #ff6200;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    display: inline-block;
+}
+
+/* เอฟเฟกต์เมื่อ Hover */
+.activity-card:hover {
+    transform: scale(1.05);
+}
+
+.activity-card:hover .activity-img img {
+    transform: scale(1.2);
+}
+
+.activity-card:hover .btn-visit {
+    border-bottom: 2px solid #ff0000;
+}
+
+/* ซ่อน Scrollbar */
+.activity-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.activity-card:hover .activity-info {
+    opacity: 0.7;
+}
+/* ตั้งค่า Overlay ตรงกลางภาพ */
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* จัดกลางแนวนอน */
+    align-items: center;     /* จัดกลางแนวตั้ง */
+    background-color: rgba(0, 0, 0, 0.4); /* พื้นหลังดำจางๆ ตอน hover */
+    opacity: 0;               /* เริ่มต้นให้โปร่งใส (มองไม่เห็น) */
+    transition: all 0.4s ease;
+    transform: scale(0.9);    /* ให้ดูเล็กลงนิดหน่อยก่อนแสดงผล */
+}
+
+/* สไตล์ปุ่มคำว่า เยี่ยมชม */
+.hover-btn {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: 2px solid #ff6200;
+    border-radius: 50px;
+    background-color: #ff6200;
+    box-shadow: 0 5px 15px rgba(255, 98, 0, 0.4);
+}
+
+@keyframes scrollAuto {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* ปรับค่านี้ตามจำนวนรูปภาพ ถ้าภาพเยอะให้ลบค่าติดลบมากขึ้น */
+        transform: translateX(calc(-50% - 20px));
+    }
+}
+
+
+
+
+/*. footer. */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ff0000;
+    font-size: 0.85rem;
+    background-color: rgb(255, 0, 0) ;
+}
+
+
+
+
+
+
+
+.split-section {
+    display: flex;
+    height: 600px; /* ปรับความสูงตามต้องการ */
+    width: 100%;
+    font-family: 'Prompt', sans-serif;
+    background: linear-gradient(to bottom, #000000, #3d3636);
+    margin-bottom: -50px;
+}
+
+.split-box {
+    flex: 1; /* แบ่งคนละกึ่งหนึ่ง */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+
+/* พื้นที่เว้นไว้ใส่รูป */
+.image-placeholder {
+    width: 80%;
+    height: 350px;
+    margin-bottom: 30px;
+    /* ใส่พื้นหลังชั่วคราวเพื่อดูตำแหน่ง */
+    background-color: rgba(238, 224, 224, 1); 
+    border-radius: 20px;
+}
+
+
+.split-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #3b0b0b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+.split-btn:hover {
+    background-color: #FF0000;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+
+/* สไตล์ปุ่มพื้นฐาน */
+
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+    .split-section {
+        flex-direction: column;
+        height: auto;
+    }
+    .split-box {
+        padding: 50px 0;
+    }
+}
+
+.hidden-text{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 6s ease-out;
+}
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* กำหนดสีพื้นฐาน */
+.name-item {
+    display: flex;
+    text-align: left;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-left: 120px;
+}
+.ID-item{
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-right: 80px;
+
+}
+
+/* --- ตรรกะการสลับสี (Logic) --- */
+
+/* ลำดับที่ 1, 3, 5, ... (ตัวคี่) ให้เป็นสีขาว */
+.col:nth-child(odd) .name-item {
+    color: #ffffff;
+}
+
+/* ลำดับที่ 2, 4, 6, ... (ตัวคู่) ให้เป็นสีม่วง */
+.col:nth-child(even) .name-item {
+    color: #ffffff; /* สีม่วงตามรูป */
+}
+.member-text{
+    font-size: 80px;
+    font-weight: 600;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+}
+.name-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+.footer-image{
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: none;
+}
+.member-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+.footer-divider {
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 3px;
+    border: 2px solid #000000;
+    width: 80%;
+}
+/* จอมือถือ (ต่ำกว่า 768px) */
+@media (max-width: 767.98px) {
+    .name-item {
+        text-align: center; /* จัดกลางในมือถือให้ดูสมดุล */
+    }
+}

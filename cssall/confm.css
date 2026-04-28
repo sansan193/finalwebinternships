@@ -1,0 +1,108 @@
+/* พื้นหลังสีเทาเข้มแบบในภาพ */
+.bg-dark-custom {
+    background-color: #602424;
+    font-family: 'Sarabun', sans-serif;
+}
+
+/* การ์ดสีเทากลางขอบมน */
+.confirmation-card {
+    background-color: #7a7a7a;
+    padding: 20px 40px;
+    border-radius: 20px;
+    color: white;
+}
+
+/* หัวข้อ ตรวจสอบข้อมูล */
+.header-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+/* เส้นสีแดงหนา */
+.red-divider {
+    border: none;
+    height: 5px;
+    background-color: #b32d2d;
+    opacity: 1;
+    margin-bottom: 30px;
+}
+
+/* กล่องสีขาวด้านในสำหรับแสดงข้อมูล */
+.info-container {
+    background-color: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #999;
+}
+
+/* การจัดวางแบบ Label อยู่ซ้าย Value อยู่ขวา */
+.info-row {
+    display: flex;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.label {
+    flex: 0 0 140px; /* ความกว้างหัวข้อ */
+    font-weight: bold;
+    color: #ffffff; /* ปรับเป็นสีขาวถ้าต้องการให้เหมือนเป๊ะตามรูป */
+    background-color: #7a7a7a; /* พื้นหลังหัวข้อแบบในรูป */
+    padding-left: 5px;
+}
+
+.info-container .label {
+    background-color: transparent;
+    color: #444;
+}
+
+.value {
+    flex: 1;
+    padding-left: 15px;
+    color: #8b2c2c; /* สีน้ำตาลแดงแบบในรูป */
+    font-weight: 600;
+}
+
+/* ปุ่มย้อนกลับด้านบน */
+.top-nav .btn-back-link {
+    background: #666;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+/* ปุ่มแก้ไขและยืนยันด้านล่าง */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.btn-edit {
+    background: transparent;
+    border: none;
+    color: #ffcc00; /* สีเหลืองทอง */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.btn-confirm {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.btn-confirm:hover {
+    background-color: #222;
+}

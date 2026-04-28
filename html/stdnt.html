@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student</title>
+    <link rel="stylesheet" href="../../cssall/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../cssall/logintrue.css">
+</head>
+
+
+<body class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-8">
+                <div class="prof-card p-5 shadow-sm ">
+                    <div class="btn-back-box">
+                        <a href="../../index.php" class="btn-back btn-secondary mt-3">กลับสู่หน้าหลัก</a>
+                    </div>
+                    <h1 class="nisit text-center fw-bold text-danger ">นิสิต</h1>
+                    <h1 class="stdnt-name fw-bold">
+                        ธิดาพร ชาวคูเวียง 
+                    </h1>
+                    <h1 class="user-name">67000000001</h1>
+                    <hr class="red-line mb-5">
+                    <div class="stdnt-info">
+                        <div class="info">
+                            <div class="info-left">
+                                <p>ชั้นปีที่ </p>
+                                <p>ผลการเรียนสะสม </p>
+                                <p>E-mail </p>
+                                <p>เบอร์โทรศัพท์ </p>
+                            </div>
+                            
+                            <div class="">:<br>:<br>:<br>:<br></div>
+
+                            <div class="info-right">
+                                <p>3</p>
+                                <p>3.50</p>
+                                <p>thidaporn.chawkuea@kmutt.ac.th</p>
+                                <p>081-234-5678</p>
+                            </div>
+                        </div>
+                        <div class="btn-down d-grid gap-2 col-8 mx-auto mt-1">
+                            <p class="txt-int">สำหรับนิสิตที่ต้องการฝึกงานกับหน่วยงานภายนอก</p>
+                            <div class="reqst d-grid gap-2">
+                                <div class="req">
+
+                                        <!-- 2. ถ้ามีข้อมูลแล้ว (ส่งคำขอแล้ว) -->
+                                        <a href="stdntdt.php?id=<?php echo $my_request_id; ?>" class="btn btn-primary mt-3">
+                                            ดูรายละเอียดคำขอ
+                                        </a>
+                                        <small class="text-center text-light">* คุณได้ส่งคำขอไปเรียบร้อยแล้ว</small>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/bootstrap.min.js"></script>
+</body>
+</html>
