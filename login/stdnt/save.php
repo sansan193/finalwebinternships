@@ -3,15 +3,7 @@
 session_start();
 
 // 2. เชื่อมต่อฐานข้อมูล
-$servername = "localhost";
-$username   = "root";
-$password   = "";
-$dbname     = "internships"; 
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
-$conn->set_charset("utf8");
-
+include("../../db_connect.php");
 // 3. ตรวจสอบรหัสนักเรียนจาก Session
 $student_id = $_SESSION['stdnt_ID'] ?? $_SESSION['username'] ?? $_SESSION['id'] ?? null;
 

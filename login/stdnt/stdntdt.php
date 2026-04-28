@@ -1,8 +1,7 @@
 <?php
 session_start();
 // 1. เชื่อมต่อฐานข้อมูล
-$conn = new mysqli("localhost", "root", "", "internships");
-$conn->set_charset("utf8");
+include("../../db_connect.php");
 
 if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 

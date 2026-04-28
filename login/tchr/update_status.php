@@ -1,6 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "internships");
-$conn->set_charset("utf8");
+include("../../db_connect.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $request_id = $_POST['request_id'];

@@ -5,9 +5,8 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'Student') {
     exit();
 }
 
-
-$conn = new mysqli("localhost", "root", "", "internships");
-$conn->set_charset("utf8");
+// เชื่อมต่อฐานข้อมูล
+include("../../db_connect.php");
 
 // ดึงรหัสนักเรียนจาก Session
 $student_id = $_SESSION['stdnt_ID'] ?? $_SESSION['username']; 

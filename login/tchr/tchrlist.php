@@ -7,8 +7,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'Teacher') {
 ?>
 
 <?php
-$conn = new mysqli("localhost", "root", "", "internships");
-$conn->set_charset("utf8");
+include("../../db_connect.php");
 
 $sql = "SELECT 
             s.stdnt_F_Name, 

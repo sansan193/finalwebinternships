@@ -1,11 +1,6 @@
 <?php
 // 1. เชื่อมต่อฐานข้อมูล
-$conn = new mysqli("localhost", "root", "", "internships");
-$conn->set_charset("utf8");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include("../../db_connect.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // รับค่าจากฟอร์ม

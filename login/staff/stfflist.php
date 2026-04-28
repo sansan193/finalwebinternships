@@ -7,8 +7,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'Staff') {
 ?>
 
 <?php
-$conn = new mysqli("localhost", "root", "", "internships");
-$conn->set_charset("utf8");
+include("../../db_connect.php");
 
 // 1. ดึงรายการที่รอเจ้าหน้าที่ตรวจสอบ (สถานะ 11)
 $sql11 = "SELECT s.stdnt_F_Name, s.stdnt_L_Name, c.company_Name, r.request_Date_Start, r.request_ID, r.status_ID 

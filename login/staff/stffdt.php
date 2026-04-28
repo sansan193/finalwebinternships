@@ -1,8 +1,6 @@
 <?php
 // เชื่อมต่อฐานข้อมูล
-$conn = new mysqli("localhost", "root", "", "internships");
-$conn->set_charset("utf8");
-
+include("../../db_connect.php");
 $id = $_GET['id'];
 
 // เขียนคำสั่ง SQL เพื่อดึงข้อมูลจากตาราง 

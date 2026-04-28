@@ -1,9 +1,9 @@
 <?php
 session_start();
 // เชื่อมต่อฐานข้อมูล
-$conn = mysqli_connect("localhost", "root", "", "internships");
+include("db_connect.php");
 
-if (!$conn) { die("Connection failed: " . mysqli_connect_error()); }
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = mysqli_real_escape_string($conn, $_POST['username']);

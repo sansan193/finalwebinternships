@@ -4,8 +4,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$conn = new mysqli("localhost", "root", "", "internships");
-$conn->set_charset("utf8");
+include("../../db_connect.php");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['request_id'];

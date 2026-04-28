@@ -1,6 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "internships");
-$conn->set_charset("utf8");
+include("../../db_connect.php");
 $id = $_GET['id'];
 
 $sql = "SELECT s.*, r.*, c.*, st.status_Name 
